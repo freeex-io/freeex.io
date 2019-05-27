@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/freeex.io/static/css/main.e81f0184.chunk.css",
-    "main.js": "/freeex.io/static/js/main.fadee7e5.chunk.js",
-    "main.js.map": "/freeex.io/static/js/main.fadee7e5.chunk.js.map",
+    "main.css": "/freeex.io/static/css/main.53502b9d.chunk.css",
+    "main.js": "/freeex.io/static/js/main.febee8b9.chunk.js",
+    "main.js.map": "/freeex.io/static/js/main.febee8b9.chunk.js.map",
     "runtime~main.js": "/freeex.io/static/js/runtime~main.7d1b7c7f.js",
     "runtime~main.js.map": "/freeex.io/static/js/runtime~main.7d1b7c7f.js.map",
     "static/js/2.d1615555.chunk.js": "/freeex.io/static/js/2.d1615555.chunk.js",
     "static/js/2.d1615555.chunk.js.map": "/freeex.io/static/js/2.d1615555.chunk.js.map",
     "index.html": "/freeex.io/index.html",
-    "precache-manifest.b4dc172adb4e937fb5539e7733ac3057.js": "/freeex.io/precache-manifest.b4dc172adb4e937fb5539e7733ac3057.js",
+    "precache-manifest.11a90a0426df204cc011c91f413f8fa4.js": "/freeex.io/precache-manifest.11a90a0426df204cc011c91f413f8fa4.js",
     "service-worker.js": "/freeex.io/service-worker.js",
-    "static/css/main.e81f0184.chunk.css.map": "/freeex.io/static/css/main.e81f0184.chunk.css.map",
+    "static/css/main.53502b9d.chunk.css.map": "/freeex.io/static/css/main.53502b9d.chunk.css.map",
     "static/media/logo.svg": "/freeex.io/static/media/logo.4bdb252e.svg"
   }
 }
