@@ -72,13 +72,13 @@ const Main = () => {
             </div>
             <div className="intro-text">
               <div>
-                <h4>Hello I’m Britton, I create tailor</h4>
+                <h4>We're the exchange-specialized</h4>
               </div>
               <div>
-                <h4>made digital experiences that</h4>
+                <h4>consulting team that challenges</h4>
               </div>
               <div>
-                <h4>challenge the status quo.</h4>
+                <h4>the new cryptocurrency ecosystem.</h4>
               </div>
               <div>
                 <h4>Never default. Never dull.</h4>
@@ -87,9 +87,9 @@ const Main = () => {
           </div>
           <div className="half thin-text">
             <p className="intro-subtext">
-              Humbly designing digital products until<br />
-              robots take my job from me. But for now<br />
-              I am living the dream. Beer, music, &amp; design.
+              As a successful partner in the cryptocurrency<br />
+              exchange and blockchain project,<br />
+              you'll see the best results.
             </p>
             <div className="intro-sublink">
               <span>FREEEX COMMUNITY</span>
