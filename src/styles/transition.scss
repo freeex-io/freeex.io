@@ -1,0 +1,19 @@
+#app-body {
+  &.is-loading {
+    .page {
+      visibility: inherit;
+      opacity: 1;
+    }
+  }
+
+  &.loaded {
+    header {
+      opacity: 1;
+    }
+
+    .page {
+      visibility: inherit;
+      opacity: 1;
+    }
+  }
+}

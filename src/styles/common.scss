@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,600,800|Noto+Sans+KR:300,500,900|Noto+Sans+SC:300,500,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: 'Mukta', 'Noto Sans SC', 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #1d1c21;
+  margin: 0;
+}
+
+html, body {
+  overflow: hidden;
+}
