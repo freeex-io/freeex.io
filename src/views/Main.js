@@ -24,6 +24,9 @@ const countEnd = () => {
 
   const introSubText = document.getElementsByClassName('intro-subtext')[0];
   introSubText.style.opacity = 1;
+
+  const introSubLink = document.getElementsByClassName('intro-sublink')[0];
+  introSubLink.style.opacity = 1;
 }
 
 const Main = () => {
@@ -33,6 +36,21 @@ const Main = () => {
         <ul>
           <li className="active">
             <p>Intro</p>
+          </li>
+          <li>
+            <p>Incubating</p>
+          </li>
+          <li>
+            <p>Accelerating</p>
+          </li>
+          <li>
+            <p>EX Operating</p>
+          </li>
+          <li>
+            <p>Marketing</p>
+          </li>
+          <li>
+            <p>Assets Management</p>
           </li>
         </ul>
       </aside>
@@ -73,6 +91,9 @@ const Main = () => {
               robots take my job from me. But for now<br />
               I am living the dream. Beer, music, &amp; design.
             </p>
+            <div className="intro-sublink">
+              <span>FREEEX COMMUNITY</span>
+            </div>
           </div>
         </div>
       </div>
