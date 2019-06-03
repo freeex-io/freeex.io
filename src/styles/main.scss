@@ -165,6 +165,8 @@ main {
         min-height: 100vh;
         width: 100%;
         font-family: 'Red Thinker Light', sans-serif;
+        opacity: 1;
+        transition: all 1s ease-in-out;
 
         h1 {
           margin: 0;
@@ -191,6 +193,8 @@ main {
         align-items: flex-end;
         bottom: 15%;
         position: relative;
+        opacity: 1;
+        transition: all .5s ease-in-out;
 
         .half {
           position: relative;
@@ -334,6 +338,159 @@ main {
         }
       }
     }
+
+    .business {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+
+      .banner {
+        height: 0;
+        width: 100%;
+        background: #1d1c21;
+        position: fixed;
+        top: 0;
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+        
+        .banner-overlay {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(29, 28, 33, .3);
+        }
+
+        .banner-background {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: top center;
+        }
+      }
+
+      .content {
+        display: block;
+        position: relative;
+        height: 100%;
+
+        .back {
+          position: absolute;
+          width: 37%;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-60%) translateX(-28%);
+          overflow: hidden;
+
+          &:before {
+            content: "";
+            display: block;
+            padding-bottom: 75%;
+          }
+
+          .back-img {
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            opacity: 0;
+          }
+        }
+
+        .center {
+          position: absolute;
+          width: 54%;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          overflow: hidden;
+
+          &:before {
+            content: "";
+            display: block;
+            padding-bottom: 55%;
+          }
+
+          .center-img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+
+        .front {
+          position: absolute;
+          width: 38%;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-28%) translateX(26%);
+
+          &:before {
+            content: "";
+            display: block;
+            padding-bottom: 60%;
+          }
+
+          .front-info {
+            background: #fff;
+            width: 60.6%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            right: 0;
+            padding: 4%;
+            transform: scaleY(0);
+            transform-origin: 100% 100%;
+
+            .front-item {
+              position: absolute;
+              padding-right: 10%;
+              height: 86%;
+            }
+          }
+        }
+      }
+
+      .side {
+        position: absolute;
+        left: 5%;
+        top: 50%;
+        transform: rotate(-90deg) translateX(-50%);
+        transform-origin: top left;
+        text-align: center;
+
+        .side-item {
+          position: absolute;
+          transform: translateX(-50%);
+          overflow: hidden;
+
+          p {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: .4rem;
+            line-height: 1;
+            font-weight: 500;
+            white-space: nowrap;
+            color: #b4a890;
+            visibility: hidden;
+            transform: translateY(100%);
+            transition: all .5s ease-in-out;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -343,13 +500,16 @@ main {
     transform: rotate(-20deg) skew(25deg) translate(0,0);
     text-shadow: -5px 5px 0 rgba(0,0,0,.2);
   }
-  50% {
+  40% {
     transform: rotate(-20deg) skew(25deg) translate(50px,-50px);
     text-shadow: -50px 50px 0 rgba(0,0,0,.2); 
     filter: blur(15px);
   }
-  100% {
+  80% {
     transform: rotate(-20deg) skew(25deg) translate(0,0);
     text-shadow: -5px 5px 0 rgba(0,0,0,.2);
+  }
+  100% {
+    text-shadow: none;
   } 
 }

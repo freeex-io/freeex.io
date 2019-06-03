@@ -1,64 +1,20 @@
 import React from 'react';
+
+import { LoadHome } from '../utils/LoadHome';
+import Aside from './Aside';
 import Intro from './Intro';
 
-const countEnd = () => {
-  const body = document.getElementById('app-body');
-  body.classList.add('loaded');
-  body.classList.remove('is-loading');
-
-  const nav = document.getElementsByTagName('aside')[0];
-  nav.style.transform = 'translate(0%, -50%) matrix(1, 0, 0, 1, 0, 0)';
-  nav.style.opacity = 1;
-
-  const since = document.getElementsByClassName('since')[0];
-  since.getElementsByTagName('span')[0].style.width = '3vw';
-  since.getElementsByTagName('p')[0].style.opacity = 1;
-  since.getElementsByTagName('p')[0].style.left = 0;
-
-  const introText = document.getElementsByClassName('intro-text')[0];
-  const divLength = introText.getElementsByTagName('div').length;
-  for (let i = 0; i < divLength; i++) {
-    const ele = introText.getElementsByTagName('div')[i].getElementsByTagName('h4')[0]
-    ele.style.opacity = 1;
-  }
-
-  const introSubText = document.getElementsByClassName('intro-subtext')[0];
-  introSubText.style.opacity = 1;
-
-  const introSubLink = document.getElementsByClassName('intro-sublink')[0];
-  introSubLink.style.opacity = 1;
-}
+import incubating from '../assets/incubating.jpg';
 
 const Main = () => {
   return (
     <section className="page">
-      <aside className="nav">
-        <ul>
-          <li className="active">
-            <p>Intro</p>
-          </li>
-          <li>
-            <p>Incubating</p>
-          </li>
-          <li>
-            <p>Accelerating</p>
-          </li>
-          <li>
-            <p>EX Operating</p>
-          </li>
-          <li>
-            <p>Marketing</p>
-          </li>
-          <li>
-            <p>Assets Management</p>
-          </li>
-        </ul>
-      </aside>
+      <Aside />
       <div className="overlay"></div>
       <div className="underlay"></div>
       <div className="intro">
         <Intro 
-          onLoad={countEnd}
+          onLoad={LoadHome}
         />
         <div className="row">
           <div className="half bold-text">
@@ -92,6 +48,54 @@ const Main = () => {
             <div className="intro-sublink">
               <span>FREEEX COMMUNITY</span>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="business">
+        <div className="banner">
+          <div className="banner-overlay"></div>
+          <div className="banner-background" style={{backgroundImage: `url(${incubating})`}}></div>
+        </div>
+        <div className="content">
+          <div className="back">
+            <div className="back-img"></div>
+            <div className="back-img"></div>
+            <div className="back-img"></div>
+            <div className="back-img"></div>
+            <div className="back-img"></div>
+          </div>
+          <div className="center">
+            <div className="center-img"></div>
+            <div className="center-img"></div>
+            <div className="center-img"></div>
+            <div className="center-img"></div>
+            <div className="center-img"></div>
+          </div>
+          <div className="front">
+            <div className="front-info">
+              <div className="front-item"></div>
+              <div className="front-item"></div>
+              <div className="front-item"></div>
+              <div className="front-item"></div>
+              <div className="front-item"></div>
+            </div>
+          </div>
+        </div>
+        <div className="side">
+          <div className="side-item">
+            <p>Incubating</p>
+          </div>
+          <div className="side-item">
+            <p>Accelerating</p>
+          </div>
+          <div className="side-item">
+            <p>Exchange Operating</p>
+          </div>
+          <div className="side-item">
+            <p>Marketing</p>
+          </div>
+          <div className="side-item">
+            <p>Assets Management</p>
           </div>
         </div>
       </div>
