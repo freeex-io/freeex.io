@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/freeex.io/precache-manifest.87e2611adfaa30406f373738bf6f43c6.js"
+  "/freeex.io/precache-manifest.b8629f9c9aa41c8ddeebb25663aa5241.js"
 );
 
 self.addEventListener('message', (event) => {
