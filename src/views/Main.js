@@ -1,5 +1,5 @@
 import React from 'react';
-import CountUp from 'react-countup';
+import Intro from './Intro';
 
 const countEnd = () => {
   const body = document.getElementById('app-body');
@@ -57,18 +57,16 @@ const Main = () => {
       <div className="overlay"></div>
       <div className="underlay"></div>
       <div className="intro">
-        <CountUp start={1900} end={2019} delay={0} duration={5} onEnd={countEnd}>
-          {({ countUpRef }) => (
-            <div className="loading-count">
-              <span ref={countUpRef} />
-            </div>
-          )}
-        </CountUp>
+        <Intro 
+          onLoad={countEnd}
+        />
         <div className="row">
           <div className="half bold-text">
             <div className="since">
               <span></span>
-              <p>EST 2019</p>
+              <p>
+                FREEEX
+              </p>
             </div>
             <div className="intro-text">
               <div>

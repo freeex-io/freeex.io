@@ -156,15 +156,24 @@ main {
       margin: auto;
       z-index: 1;
 
-      .loading-count {
+      .intro-title {
         position: absolute;
-        bottom: 0;
-        line-height: .75;
-        letter-spacing: -5vh;
-        opacity: .15;
-        font-size: calc(108vh);
-        font-family: 'Staatliches', cursive;
-        font-weight: 100;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+        font-family: 'Red Thinker Light', sans-serif;
+
+        h1 {
+          margin: 0;
+          padding: 0;
+          font-size: 12em;
+          text-transform: uppercase;
+          transform: rotate(-20deg) skew(25deg);
+          animation: animate 5s ease-in-out;
+        }
       }
 
       .row {
@@ -197,7 +206,7 @@ main {
             align-items: center;
             padding-bottom: 4%;
 
-            span {
+            span:not(.brand) {
               width: 0;
               height: 2px;
               background: #fff;
@@ -209,17 +218,17 @@ main {
               position: relative;
               padding-left: 3%;
               width: 100%;
-              font-size: .625rem;
-              font-weight: 700;
+              font-size: 1.4rem;
               letter-spacing: .15rem;
               text-transform: uppercase;
               display: inline-block;
-              line-height: 2;
+              line-height: 1;
               color: #fff;
               opacity: 0;
               left: 20px;
               transition: all .3s ease;
               transition-delay: 1s;
+              font-family: 'Red Thinker Light', sans-serif;
             }
           }
 
@@ -236,7 +245,7 @@ main {
                 line-height: 1.3;
                 opacity: 0;
                 transition: opacity .5s ease-in;
-                font-weight: 700;
+                font-weight: 800;
               }
 
               &:last-of-type {
@@ -275,6 +284,7 @@ main {
             opacity: 0;
             transition: opacity .8s ease;
             transition-delay: 2s;
+            font-weight: 200;
           }
 
           .intro-sublink {
@@ -285,7 +295,7 @@ main {
             
             span {
               font-size: .9vw;
-              font-weight: 700;
+              font-weight: 800;
               color: #454545;
               position: relative;
               cursor: pointer;
@@ -325,4 +335,21 @@ main {
       }
     }
   }
+}
+
+@keyframes animate 
+{
+  0% {
+    transform: rotate(-20deg) skew(25deg) translate(0,0);
+    text-shadow: -5px 5px 0 rgba(0,0,0,.2);
+  }
+  50% {
+    transform: rotate(-20deg) skew(25deg) translate(50px,-50px);
+    text-shadow: -50px 50px 0 rgba(0,0,0,.2); 
+    filter: blur(15px);
+  }
+  100% {
+    transform: rotate(-20deg) skew(25deg) translate(0,0);
+    text-shadow: -5px 5px 0 rgba(0,0,0,.2);
+  } 
 }
