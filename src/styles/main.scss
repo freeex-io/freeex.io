@@ -154,7 +154,6 @@ main {
       bottom: 0;
       left: 0;
       margin: auto;
-      z-index: 1;
 
       .intro-title {
         position: absolute;
@@ -166,7 +165,7 @@ main {
         width: 100%;
         font-family: 'Red Thinker Light', sans-serif;
         opacity: 1;
-        transition: all 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
 
         h1 {
           margin: 0;
@@ -392,6 +391,18 @@ main {
             padding-bottom: 75%;
           }
 
+          .overlay-back {
+            background: #1d1c21;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            transform: scaleX(0);
+            transform-origin: 100% 50%;
+            transition: transform 1s cubic-bezier(.19,1,.22,1);
+          }
+
           .back-img {
             background-size: cover;
             height: 100%;
@@ -399,6 +410,7 @@ main {
             position: absolute;
             bottom: 0;
             opacity: 0;
+            transition: opacity .5s ease-in-out;
           }
         }
 
@@ -424,6 +436,26 @@ main {
             position: absolute;
             left: 0;
             top: 0;
+            
+            .center-background {
+              height: 100%;
+              width: 100%;
+              position: absolute;
+              top: 0;
+              background-size: cover;
+              background-position: center center;
+              transform: scale3d(1.2,1.2,1.2);
+              opacity: 0;
+              transition: transform 2s cubic-bezier(.19,1,.22,1),opacity 1.1s cubic-bezier(.19,1,.22,1);
+            }
+
+            &.is-active {
+              .center-background {
+                opacity: 1;
+                transform: none;
+                -webkit-transform: translate3d(0,0,0);
+              }
+            }
           }
         }
 
@@ -451,13 +483,47 @@ main {
             z-index: 2;
             right: 0;
             padding: 4%;
-            transform: scaleY(0);
-            transform-origin: 100% 100%;
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
 
             .front-item {
               position: absolute;
               padding-right: 10%;
               height: 86%;
+
+              .title {
+                text-transform: uppercase;
+                font-size: 2vw;
+                padding: 0 0 4% 0;
+                letter-spacing: .1rem;
+                font-weight: 700;
+                position: relative;
+                line-height: 1.2;
+                opacity: 0;
+                transition: all .3s ease-in-out;
+              }
+
+              .excerpt {
+                color: #000;
+                padding-top: .5rem;
+                font-size: 1vw;
+                line-height: 1.7;
+                opacity: 0;
+                transition-delay: .2s;
+                transition: all .3s ease-in-out;
+              }
+
+              &.is-active {
+                z-index: 1;
+  
+                .title {
+                  opacity: 1;
+                }
+  
+                .excerpt {
+                  opacity: 1;
+                }
+              }
             }
           }
         }

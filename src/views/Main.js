@@ -58,26 +58,52 @@ const Main = () => {
         </div>
         <div className="content">
           <div className="back">
-            <div className="back-img"></div>
-            <div className="back-img"></div>
-            <div className="back-img"></div>
-            <div className="back-img"></div>
-            <div className="back-img"></div>
+            <div className="overlay-back"></div>
+            <div className="back-img" style={{backgroundImage: `url(${incubating})`}}></div>
+            <div className="back-img" style={{backgroundImage: `url(${incubating})`}}></div>
+            <div className="back-img" style={{backgroundImage: `url(${incubating})`}}></div>
+            <div className="back-img" style={{backgroundImage: `url(${incubating})`}}></div>
+            <div className="back-img" style={{backgroundImage: `url(${incubating})`}}></div>
           </div>
           <div className="center">
-            <div className="center-img"></div>
-            <div className="center-img"></div>
-            <div className="center-img"></div>
-            <div className="center-img"></div>
-            <div className="center-img"></div>
+            <div className="center-img">
+              <div className="center-background" style={{backgroundImage: `url(${incubating})`}}></div>
+            </div>
+            <div className="center-img">
+              <div className="center-background" style={{backgroundImage: `url(${incubating})`}}></div>
+            </div>
+            <div className="center-img">
+              <div className="center-background" style={{backgroundImage: `url(${incubating})`}}></div>
+            </div>
+            <div className="center-img">
+              <div className="center-background" style={{backgroundImage: `url(${incubating})`}}></div>
+            </div>
+            <div className="center-img">
+              <div className="center-background" style={{backgroundImage: `url(${incubating})`}}></div>
+            </div>
           </div>
           <div className="front">
             <div className="front-info">
-              <div className="front-item"></div>
-              <div className="front-item"></div>
-              <div className="front-item"></div>
-              <div className="front-item"></div>
-              <div className="front-item"></div>
+              <div className="front-item">
+                <h2 className="title">Icubating</h2>
+                <p className="excerpt">The stories and adventures of four friends determined to travel around the world together.</p>
+              </div>
+              <div className="front-item">
+                <h2 className="title">Accelerating</h2>
+                <p className="excerpt">The stories and adventures of four friends determined to travel around the world together.</p>
+              </div>
+              <div className="front-item">
+                <h2 className="title">Exchange Operating</h2>
+                <p className="excerpt">The stories and adventures of four friends determined to travel around the world together.</p>
+              </div>
+              <div className="front-item">
+                <h2 className="title">Marketing</h2>
+                <p className="excerpt">The stories and adventures of four friends determined to travel around the world together.</p>
+              </div>
+              <div className="front-item">
+                <h2 className="title">Assets Management</h2>
+                <p className="excerpt">The stories and adventures of four friends determined to travel around the world together.</p>
+              </div>
             </div>
           </div>
         </div>

@@ -65,4 +65,26 @@ export const ResetAside = () => {
     ele.style.removeProperty('opacity');
     ele.style.removeProperty('transform');
   }
+
+  const back = document.getElementsByClassName('back')[0];
+  const backLength = back.getElementsByClassName('back-img').length;
+  for (let i = 0; i < backLength; i++) {
+    const ele = back.getElementsByClassName('back-img')[i];
+    ele.style.removeProperty('opacity');
+  }
+
+  const center = document.getElementsByClassName('center')[0];
+  const centerLength = center.getElementsByClassName('center-img').length;
+  for (let i = 0; i < centerLength; i++) {
+    const ele = center.getElementsByClassName('center-img')[i];
+    ele.classList.remove('is-active');
+  }
+
+  const front = document.getElementsByClassName('front-info')[0];
+  front.style.removeProperty('opacity');
+  const frontLength = front.getElementsByClassName('front-item').length;
+  for (let i = 0; i < frontLength; i++) {
+    const ele = front.getElementsByClassName('front-item')[i];
+    ele.classList.remove('is-active');
+  }
 }
